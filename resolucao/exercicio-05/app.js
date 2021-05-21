@@ -15,8 +15,6 @@ const tvShows = [
   { name: 'Watchmen', releaseYear: 2019 }
 ]
 
-const series = tvShows.map(tvShows => {
-  return {name: tvShows.name}
-})
+const series = tvShows.map(({name}) => name)
 
 console.log(series);

@@ -7,7 +7,8 @@
 
 const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
 
-const oddNumbers = randomNumbers.filter ( randomNumbers => randomNumbers %2 )
+const getoddNumber = (randomNumbers => randomNumbers %2)
 
-console.log(randomNumbers);
-console.log(oddNumbers); //RESPOSTA
+const oddNumbers = randomNumbers.filter (getoddNumber)
+
+console.log(oddNumbers);

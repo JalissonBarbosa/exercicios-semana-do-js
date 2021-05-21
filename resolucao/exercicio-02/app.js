@@ -6,7 +6,14 @@
 
 const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
 
-const under501 = crazyNumbers.filter(crazyNumbers => crazyNumbers < 501)
+const countNumbersUnder501 = (accumulator, crazyNumbers) => {
+  if (crazyNumbers < 501) {
+    accumulator += 1
+  }
+
+  return accumulator
+}
+
+const under501 = crazyNumbers.reduce(countNumbersUnder501,0)
 
 console.log(under501);
-console.log(`Existem ${under501.length} números abaixo de 501 no array`);
