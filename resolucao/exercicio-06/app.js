@@ -23,16 +23,8 @@ const cart = [
   { name: 'Death Stranding', price: 149.99 }
 ]
 
-const cartNames = cart.map(cart => {
-  return cart.name
+const cartNames = cart.reduce((accumulator, product) => {
+  return `${accumulator}- ${product.name}\n`
+}, '')
 
-})
-
-
-console.log(`
-- ${cartNames[0]}\n
-- ${cartNames[1]}\n
-- ${cartNames[2]}\n
-- ${cartNames[3]}\n
-- ${cartNames[4]}\n
-`);
+console.log(cartNames);
